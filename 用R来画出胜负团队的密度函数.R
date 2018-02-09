@@ -6,8 +6,11 @@ allData<-X5v5_去重数据
 winTeam<-subset(allData,TeamWin==1)
 loseTeam<-subset(allData,TeamWin==0)
 
-pdf("~/我的文档/MBA养成记/3 论文写作/论文书写/thesisCode/density.pdf")
+pdf("~/我的文档/MBA养成记/3 论文写作/论文书写/thesisCode/胜负团队各变量的密度函数.pdf")
 
+
+plot(density(winTeam$Paticipation),col="blue",main = "Paticipation",cex.main=0.7,cex.lab=0.5,cex.axis=0.7)
+lines(density(loseTeam$Paticipation),col="red",main = "")
 
 plot(density(winTeam$Teamkills),col="blue",main = "Teamkills",cex.main=0.7,cex.lab=0.5,cex.axis=0.7)
 lines(density(loseTeam$Teamkills),col="red",main = "")
